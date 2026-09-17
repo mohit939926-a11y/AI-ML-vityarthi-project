@@ -308,6 +308,11 @@ This project was developed as a **Fundamentals of Artificial Intelligence and Ma
 
 ---
 
+## All programs in google collab file
+https://colab.research.google.com/drive/1k0StjK_6Rp6WEN44zk6S2QQ17HlD6RDp#scrollTo=y9qL4tPmf9Y6
+
+---
+
 ## 👨‍💻 Author
 
 **Mohit Thakur**
