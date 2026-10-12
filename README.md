@@ -1,8 +1,7 @@
 # 🏦 Loan Approval Predictor
 
-**Course:** Fundamentals in AIML (Vityarthi Project)
-**Author:** Mohit Thakur
-**Reg. No.:** 25MIM10126
+**Course:** Fundamentals in AIML (VITyarthi – Build Your Own Project)
+**Author:** Mohit Thakur | **Reg. No.:** 25MIM10126
 
 A beginner-friendly Machine Learning project that predicts whether a loan application is likely to be **approved or rejected** from applicant details such as income, credit history, education, loan amount and property area. It includes a trained model and a simple **Streamlit** web app.
 
