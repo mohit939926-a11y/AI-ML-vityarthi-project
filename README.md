@@ -5,8 +5,6 @@
 
 A beginner-friendly Machine Learning project that predicts whether a loan application is likely to be **approved or rejected** from applicant details such as income, credit history, education, loan amount and property area. It includes a trained model and a simple **Streamlit** web app.
 
-See [statement.md](statement.md) for the full problem statement and [docs/Project_Report.pdf](docs/Project_Report.pdf) for the detailed project report.
-
 ---
 
 ## ✨ Features
@@ -72,9 +70,6 @@ On Windows you can also just double-click **start_loan_predictor.bat**.
 | Decision Tree | 84.0% | 85.3% | 92.8% | 88.9% |
 | **Random Forest (selected)** | **86.5%** | **85.8%** | **96.4%** | **90.8%** |
 
-![Model comparison](docs/screenshots/model_comparison.png)
-![Confusion matrix](docs/screenshots/confusion_matrix.png)
-![Feature importance](docs/screenshots/feature_importance.png)
 
 **Key insight:** Credit history is the most influential feature, followed by applicant income and loan amount.
 
