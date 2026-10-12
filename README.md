@@ -1,327 +1,91 @@
- # 🏦 Loan Approval Predictor
+# 🏦 Loan Approval Predictor
 
-## 📌 Project Overview
+**Course:** Fundamentals in AIML (VITyarthi – Build Your Own Project)
+**Author:** Mohit Thakur | **Reg. No.:** 25MIM10126
 
-The **Loan Approval Predictor** is a Machine Learning project that predicts whether a loan application is likely to be **approved or rejected** based on different details provided by the applicant.
+A beginner-friendly Machine Learning project that predicts whether a loan application is likely to be **approved or rejected** from applicant details such as income, credit history, education, loan amount and property area. It includes a trained model and a simple **Streamlit** web app.
 
-The project uses historical loan application data to train a Machine Learning classification model. After training, users can enter applicant information through a simple interface and receive a prediction.
-
-> **Note:** This project is for educational purposes. Its predictions should not be used as the sole basis for real-world lending decisions.
-
----
-
-## 🎯 Objectives
-
-The main objectives of this project are:
-
-* To understand the basics of Machine Learning.
-* To perform data preprocessing.
-* To handle missing values in a dataset.
-* To convert categorical data into numerical data.
-* To train a classification model.
-* To evaluate the performance of the model.
-* To create a simple user-friendly interface.
-* To predict loan approval based on applicant information.
-
----
-
-## 🧠 Machine Learning Concept
-
-This project is a **Binary Classification** problem.
-
-The model predicts one of two possible outcomes:
-
-```text
-Approved
-Not Approved
-```
-
-### Algorithm
-
-The project can use:
-
-* Logistic Regression
-* Decision Tree Classifier
-* Random Forest Classifier
-
-The performance of the models can be compared using evaluation metrics such as accuracy.
-
----
-
-## 📊 Dataset
-
-The dataset contains information about previous loan applications.
-
-Some of the important features are:
-
-| Feature           | Description                            |
-| ----------------- | -------------------------------------- |
-| Gender            | Gender of the applicant                |
-| Married           | Marital status                         |
-| Dependents        | Number of dependents                   |
-| Education         | Education level                        |
-| Self_Employed     | Whether the applicant is self-employed |
-| ApplicantIncome   | Applicant's income                     |
-| CoapplicantIncome | Co-applicant's income                  |
-| LoanAmount        | Requested loan amount                  |
-| Loan_Amount_Term  | Loan repayment term                    |
-| Credit_History    | Credit history information             |
-| Property_Area     | Area of the property                   |
-| Loan_Status       | Loan approval result                   |
-
-`Loan_Status` is the target variable.
-
----
-
-## 🔄 Project Workflow
-
-```text
-              Dataset
-                 │
-                 ↓
-        Data Preprocessing
-                 │
-        ┌────────┴────────┐
-        │                 │
-   Missing Values     Data Encoding
-        │                 │
-        └────────┬────────┘
-                 ↓
-          Train/Test Split
-                 │
-                 ↓
-        Machine Learning Model
-                 │
-                 ↓
-             Prediction
-                 │
-        ┌────────┴────────┐
-        ↓                 ↓
-     Approved        Not Approved
-```
-
----
-
-## 🛠️ Technologies Used
-
-* **Python**
-* **Pandas** – Data manipulation
-* **NumPy** – Numerical operations
-* **Scikit-learn** – Machine Learning
-* **Matplotlib** – Data visualization
-* **Streamlit** – Web interface
-* **Joblib** – Saving the trained model
-* **Jupyter Notebook / VS Code** – Development environment
-
----
-
-## 📁 Project Structure
-
-```text
-Loan_Approval_Predictor/
-│
-├── dataset/
-│   └── loan_data.csv
-│
-├── model/
-│   └── loan_model.pkl
-│
-├── train_model.py
-├── app.py
-├── requirements.txt
-└── README.md
-```
-
----
-
-## ⚙️ Installation
-
-### 1. Clone the repository
-
-```bash
-git clone <your-github-repository-url>
-```
-
-### 2. Open the project folder
-
-```bash
-cd Loan_Approval_Predictor
-```
-
-### 3. Install required libraries
-
-```bash
-pip install -r requirements.txt
-```
-
-If `requirements.txt` is not available, install the libraries manually:
-
-```bash
-pip install pandas numpy matplotlib scikit-learn streamlit joblib
-```
-
----
-
-## ▶️ How to Run the Project
-
-### Step 1: Train the model
-
-Run:
-
-```bash
-python train_model.py
-```
-
-This will preprocess the dataset, train the Machine Learning model, evaluate it, and save the trained model.
-
----
-
-### Step 2: Run the Streamlit application
-
-Run:
-
-```bash
-streamlit run app.py
-```
-
-The application will open in your web browser.
-
----
-
-## 🖥️ Application
-
-The application allows the user to enter information such as:
-
-```text
-Gender
-Marital Status
-Education
-Dependents
-Applicant Income
-Co-applicant Income
-Loan Amount
-Loan Term
-Credit History
-Property Area
-```
-
-After entering the information, the user can click:
-
-```text
-PREDICT
-```
-
-The system then displays the predicted result:
-
-```text
-✅ Loan Approved
-```
-
-or
-
-```text
-❌ Loan Not Approved
-```
-
----
-
-## 📈 Model Evaluation
-
-The model can be evaluated using:
-
-### Accuracy
-
-Accuracy measures the proportion of correct predictions.
-
-```text
-Accuracy =
-Correct Predictions / Total Predictions
-```
-
-### Confusion Matrix
-
-A confusion matrix helps visualize:
-
-* Correct approvals
-* Correct rejections
-* Incorrect approvals
-* Incorrect rejections
-
-Other metrics that can be considered include:
-
-* Precision
-* Recall
-* F1-Score
-
-The actual performance values should be reported after training the model on the selected dataset.
+See [statement.md](statement.md) for the full problem statement and [docs/Project_Report.pdf](docs/Project_Report.pdf) for the detailed project report.
 
 ---
 
 ## ✨ Features
+- Cleans data (missing-value handling) and encodes categorical features automatically
+- Trains and compares **3 models**: Logistic Regression, Decision Tree, Random Forest
+- Automatically picks the best model (by F1-score) and saves it to `models/model.pkl`
+- Interactive **Streamlit** app showing Approved / Rejected with the approval probability
+- Evaluation with accuracy, precision, recall, F1-score and confusion matrix
+- 5 automated tests in `tests/`
 
-* Simple and easy-to-use interface
-* Machine Learning based prediction
-* Handles applicant information
-* Data preprocessing
-* Classification model
-* Model evaluation
-* Interactive Streamlit application
-* Easy to run locally
+## 🛠️ Tech Stack
+Python • Pandas • NumPy • Scikit-learn • Matplotlib • Joblib • Streamlit
 
----
+## 📂 Project Structure
+```
+AI-ML-vityarthi-project/
+├── data/
+│   └── loan_data.csv            # Dataset (1000 applications)
+├── docs/
+│   ├── Project_Report.pdf       # Full project report
+│   ├── diagrams/                # Architecture, use case, workflow, sequence, class diagrams
+│   └── screenshots/             # Result graphs
+├── models/
+│   ├── model.pkl                # Trained best model (pipeline)
+│   └── metrics.json             # Saved evaluation results
+├── src/
+│   └── utils.py                 # Data cleaning, preprocessing, prediction helpers
+├── tests/
+│   └── test_model.py            # Automated tests
+├── .gitignore
+├── README.md
+├── app.py                       # Streamlit web app
+├── generate_dataset.py          # Creates data/loan_data.csv
+├── train_model.py               # Trains, compares and saves the model
+├── requirements.txt
+├── start_loan_predictor.bat     # One-click launcher (Windows)
+└── statement.md                 # Problem statement
+```
 
-## 🚀 Future Scope
+## 📊 Dataset
+`data/loan_data.csv` has 1000 records with the columns `Gender, Married, Dependents, Education, Self_Employed, ApplicantIncome, CoapplicantIncome, LoanAmount, Loan_Amount_Term, Credit_History, Property_Area` and the target `Loan_Status` (Y = approved, N = rejected).
 
-The project can be improved in the future by:
+> **Note:** The dataset is synthetic (generated by `generate_dataset.py`) and follows the column layout of the popular Kaggle *Loan Prediction* dataset. To use real data, replace `data/loan_data.csv` with the Kaggle file and run `python train_model.py` again.
 
-* Using larger and more diverse datasets.
-* Comparing additional Machine Learning algorithms.
-* Improving feature engineering.
-* Adding probability/confidence information with appropriate interpretation.
-* Adding better data visualizations.
-* Deploying the application online.
-* Adding secure database storage.
-* Adding model monitoring and fairness checks for real-world use.
+## 🚀 How to Run
+```bash
+git clone https://github.com/mohit939926-a11y/AI-ML-vityarthi-project.git
+cd AI-ML-vityarthi-project
+pip install -r requirements.txt
 
----
+python train_model.py        # optional: retrain the model
+streamlit run app.py         # launch the app
+python tests/test_model.py   # optional: run tests
+```
+If `models/model.pkl` is missing, the app trains it automatically on the first run.
+On Windows you can also just double-click **start_loan_predictor.bat**.
 
-## ⚠️ Limitations
+## 📈 Results (80/20 train-test split)
 
-* The prediction depends on the quality and representativeness of the training dataset.
-* A Machine Learning model can make incorrect predictions.
-* Historical data may contain biases that can affect model results.
-* The model should not be treated as a guaranteed loan decision.
-* Real-world loan approval involves additional information, policies, verification, and regulatory requirements.
+| Model | Accuracy | Precision | Recall | F1-score |
+|---|---|---|---|---|
+| Logistic Regression | 86.5% | 89.4% | 91.3% | 90.3% |
+| Decision Tree | 84.0% | 85.3% | 92.8% | 88.9% |
+| **Random Forest (selected)** | **86.5%** | **85.8%** | **96.4%** | **90.8%** |
 
----
+![Model comparison](docs/screenshots/model_comparison.png)
+![Confusion matrix](docs/screenshots/confusion_matrix.png)
+![Feature importance](docs/screenshots/feature_importance.png)
 
-## 🎓 Educational Purpose
+**Key insight:** Credit history is the most influential feature, followed by applicant income and loan amount.
 
-This project was developed as a **Fundamentals of Artificial Intelligence and Machine Learning** project to demonstrate:
+## 🔮 Future Enhancements
+- Use a real-world bank dataset and handle class imbalance (SMOTE)
+- Hyperparameter tuning with GridSearchCV
+- Explainability with SHAP
+- Deploy on Streamlit Community Cloud
 
-* Data preprocessing
-* Classification
-* Model training
-* Model evaluation
-* Prediction
-* Basic AI/ML application development
+## ⚠️ Disclaimer
+Educational project. Predictions are not real financial advice.
 
----
-
-## All programs in google collab file
-https://colab.research.google.com/drive/1k0StjK_6Rp6WEN44zk6S2QQ17HlD6RDp#scrollTo=y9qL4tPmf9Y6
-
----
-
-## 👨‍💻 Author
-
-**Mohit Thakur**
-**25MIM10126**
-Student Project
-Fundamentals of Artificial Intelligence and Machine Learning
-
----
-
-## 📜 License
-
-This project is created for educational purposes.
+## 📄 License
+MIT License
