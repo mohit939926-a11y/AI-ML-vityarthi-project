@@ -1,7 +1,6 @@
 # 🏦 Loan Approval Predictor
 
-**Course:** Fundamentals in AIML
-         (VITyarthi – Build Your Own Project)
+**Course:** Fundamentals in AIML (Vityarthi Project)
 **Author:** Mohit Thakur
 **Reg. No.:** 25MIM10126
 
